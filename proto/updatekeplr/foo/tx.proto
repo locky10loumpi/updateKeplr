@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package updatekeplr.foo;
+
+option go_package = "updateKeplr/x/foo/types";
+
+// Msg defines the Msg service.
+service Msg {
+  rpc FooMessage (MsgFooMessage) returns (MsgFooMessageResponse);
+}
+message MsgFooMessage {
+  string creator = 1;
+  string coins   = 2;
+}
+
+message MsgFooMessageResponse {}
+

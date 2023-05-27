@@ -1,0 +1,12 @@
+syntax = "proto3";
+package updatekeplr.foo;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "updateKeplr/x/foo/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}
