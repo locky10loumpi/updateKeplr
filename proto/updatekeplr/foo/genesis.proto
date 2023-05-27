@@ -1,0 +1,12 @@
+syntax = "proto3";
+package updatekeplr.foo;
+
+import "gogoproto/gogo.proto";
+import "updatekeplr/foo/params.proto";
+
+option go_package = "updateKeplr/x/foo/types";
+
+// GenesisState defines the foo module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

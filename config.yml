@@ -1,21 +1,20 @@
 version: 1
 accounts:
-- name: alice
-  coins:
-  - 20000token
-  - 200000000stake
-- name: bob
-  coins:
-  - 10000token
-  - 100000000stake
-client:
-  openapi:
-    path: docs/static/openapi.yml
-faucet:
-  name: bob
-  coins:
-  - 5token
-  - 100000stake
+  - name: alice
+    coins: ["2000000000000utoken"]
+  - name: bob
+    coins: ["10000000000utoken"]
 validators:
-- name: alice
-  bonded: 100000000stake
+  - name: alice
+    bonded: "1000000000000utoken"
+client:
+  typescript:
+    path: "ts-client"
+genesis:
+  app_state:
+    staking:
+      params:
+        bond_denom: "utoken"
+    mint:
+      params:
+        mint_denom: "utoken"
