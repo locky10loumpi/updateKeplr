@@ -43,6 +43,11 @@ const connectKeplr = async ()=>{
                 coinMinimalDenom: minDenom,
                 coinDecimals: 6,
             },
+            {
+                coinDenom: "blabla",
+                coinMinimalDenom: "blabla",
+                coinDecimals: 0,
+            }
         ],
         feeCurrencies: [
             {
